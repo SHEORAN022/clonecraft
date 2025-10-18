@@ -95,7 +95,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "https://frontendcraft-brsq.vercel.app",
+    origin: process.env.FRONTEND_URL || "https://frontendcraft-brsq.vercel.app/authPage",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
