@@ -219,7 +219,7 @@ if (process.env.NODE_ENV === "development") {
 // CORS configuration
 const allowedOrigins = [
   "http://localhost:3000", // local frontend
-  "https://thriving-cobbler-c480b4.netlify.app", // Netlify frontend 
+  "https://craft-clone-frontend-qoix.vercel.app", // Netlify frontend 
   "https://clonecraft.vercel.app", // Vercel frontend
 ];
 
