@@ -22,7 +22,7 @@ app.use(helmet());
 
 // ✅ CORS Config
 const allowedOrigins = [
-  process.env.FRONTEND_URL || "https://frontendcraft-brsq.vercel.app",
+  process.env.FRONTEND_URL || "https://sweet-cupcake-1857ea.netlify.app/authpage",
 ];
 app.use(
   cors({
