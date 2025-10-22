@@ -18,7 +18,7 @@ const subscriptionsRoutes = require("./routes/subscriptions");
 
 // Initialize app
 const app = express();
-
+ 
 // Middleware
 app.use(helmet());
 app.use(
