@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 const allowedOrigins = [
   process.env.FRONTEND_URL, 
   "http://localhost:3000",
-  "https://sweet-cupcake-1857ea.netlify.app/authpage"
+  "https://sweet-cupcake-1857ea.netlify.app"
 ];
 
 app.use(cors({
