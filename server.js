@@ -118,7 +118,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // CORS configuration
-const allowedOrigin = process.env.FRONTEND_URL || "https://craft-clone-frontend-qoix.vercel.app";
+const allowedOrigin = process.env.FRONTEND_URL || "http://localhost:3000";
 app.use(
   cors({
     origin: allowedOrigin,
