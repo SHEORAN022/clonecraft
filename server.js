@@ -1,3 +1,4 @@
+
 // require("dotenv").config();
 // const express = require("express");
 // const mongoose = require("mongoose");
@@ -6,7 +7,7 @@
 // const morgan = require("morgan");
 // const path = require("path");
 
-// // Routes
+// // Import Routes
 // const categoryRoutes = require("./routes/categoryRoutes");
 // const templateRoutes = require("./routes/templateRoutes");
 // const usersRoutes = require("./routes/users");
@@ -32,14 +33,17 @@
 
 // if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
-// // Static files
+// // Static Folder for Uploaded Files
 // app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // // MongoDB Connection
-// mongoose.set('strictQuery', false);
+// mongoose.set("strictQuery", false);
 // const connectDB = async () => {
 //   try {
-//     await mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+//     await mongoose.connect(process.env.MONGODB_URI, {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//     });
 //     console.log("✅ MongoDB Connected");
 //   } catch (err) {
 //     console.error("❌ DB Connection Error:", err.message);
@@ -48,24 +52,28 @@
 // };
 
 // // Routes
-// app.use("/api/auth", authRoutes);           // User
-// app.use("/api/admin", adminAuthRoutes);     // Admin
-// app.use("/api/users", usersRoutes);         // User management
+// app.use("/api/auth", authRoutes);
+// app.use("/api/admin", adminAuthRoutes);
+// app.use("/api/users", usersRoutes);
 // app.use("/api/categories", categoryRoutes);
 // app.use("/api/templates", templateRoutes);
 // app.use("/api/dashboard", dashboardRoutes);
 // app.use("/api/subscriptions", subscriptionsRoutes);
 
-// // Test route
+// // Test Route
 // app.get("/", (req, res) => res.json({ message: "✅ API Running..." }));
 
-// // Error Handling
+// // Global Error Handling
 // app.use((err, req, res, next) => {
 //   console.error("❌ Server Error:", err.stack);
-//   res.status(500).json({ success: false, message: "Something went wrong", error: err.message });
+//   res.status(500).json({
+//     success: false,
+//     message: "Something went wrong",
+//     error: err.message,
+//   });
 // });
 
-// // Start server
+// // Start Server
 // const PORT = process.env.PORT || 7000;
 // const startServer = async () => {
 //   await connectDB();

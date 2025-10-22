@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
-const Template = require("../models/Template"); // Agar template schema hai
+const Template = require("../models/templateModel"); // Agar template schema hai
 
 // GET /api/dashboard
 router.get("/", async (req, res) => {
